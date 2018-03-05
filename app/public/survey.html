@@ -12,41 +12,41 @@
 </head>
 
 <body>
-
+<form>
   <div class="container">
     <h1>Survay Questions</h1>
     <hr>
     <h2>About You</h2>
 
     <h3>Name (Required)</h3>
-    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" id="name" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
 
     <h3>Link to Photo Image (Required)</h3>
-    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" id="photo" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
 
     <h3>Question 1</h3>
     <h4>This will be question number one</h4>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01"></label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01"></label>
+        </div>
+        <select class="custom-select" id="answer1">
+          <option selected>Select an option</option>
+          <option value="1">1 Strongly Agree</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 Strongly Disagree</option>
+        </select>
       </div>
-      <select class="custom-select" id="inputGroupSelect01">
-        <option selected>Select an option</option>
-        <option value="1">1 Strongly Agree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Disagree</option>
-      </select>
-    </div>
 
     <h3>Question 2</h3>
     <h4>This will be question number one</h4>
-    <div class="input-group mb-3">
+    <div class="input-group mb-3" id="q1">
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect01"></label>
       </div>
-      <select class="custom-select" id="inputGroupSelect01">
+      <select class="custom-select" id="answer2">
       <option selected>Select an option</option>
       <option value="1">1 Strongly Agree</option>
       <option value="2">2</option>
@@ -62,7 +62,7 @@
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect01"></label>
       </div>
-      <select class="custom-select" id="inputGroupSelect01">
+      <select class="custom-select" id="answer3">
     <option selected>Select an option</option>
     <option value="1">1 Strongly Agree</option>
     <option value="2">2</option>
@@ -78,7 +78,7 @@
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect01"></label>
       </div>
-      <select class="custom-select" id="inputGroupSelect01">
+      <select class="custom-select" id="answer4">
   <option selected>Select an option</option>
   <option value="1">1 Strongly Agree</option>
   <option value="2">2</option>
@@ -94,7 +94,7 @@
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect01"></label>
       </div>
-      <select class="custom-select" id="inputGroupSelect01">
+      <select class="custom-select" id="answer5">
   <option selected>Select an option</option>
   <option value="1">1 Strongly Agree</option>
   <option value="2">2</option>
@@ -110,7 +110,7 @@
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect01"></label>
       </div>
-    <select class="custom-select" id="inputGroupSelect01">
+    <select class="custom-select" id="answer6">
       <option selected>Select an option</option>
       <option value="1">1 Strongly Agree</option>
       <option value="2">2</option>
@@ -126,7 +126,7 @@
     <div class="input-group-prepend">
       <label class="input-group-text" for="inputGroupSelect01"></label>
     </div>
-  <select class="custom-select" id="inputGroupSelect01">
+  <select class="custom-select" id="answer7">
     <option selected>Select an option</option>
     <option value="1">1 Strongly Agree</option>
     <option value="2">2</option>
@@ -142,7 +142,7 @@
     <div class="input-group-prepend">
       <label class="input-group-text" for="inputGroupSelect01"></label>
     </div>
-      <select class="custom-select" id="inputGroupSelect01">
+      <select class="custom-select" id="answer8">
         <option selected>Select an option</option>
         <option value="1">1 Strongly Agree</option>
         <option value="2">2</option>
@@ -154,12 +154,11 @@
 
   <h3>Question 9</h3>
   <h4>This will be question number one</h4>
-
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <label class="input-group-text" for="inputGroupSelect01"></label>
     </div>
-      <select class="custom-select" id="inputGroupSelect01">
+      <select class="custom-select" id="answer9">
         <option selected>Select an option</option>
         <option value="1">1 Strongly Agree</option>
         <option value="2">2</option>
@@ -175,7 +174,7 @@
         <div class="input-group-prepend">
           <label class="input-group-text" for="inputGroupSelect01"></label>
         </div>
-          <select class="custom-select" id="inputGroupSelect01">
+          <select class="custom-select" id="answer10">
             <option selected>Select an option</option>
             <option value="1">1 Strongly Agree</option>
             <option value="2">2</option>
@@ -186,33 +185,68 @@
       </div>
     <hr>
 
-    <a href="/"><button type="button" class="btn btn-primary btn-lg btn-block"><span class=" glyphicon glyphicon-ok-circle "></span>Submit</button></a>
+    <button type="button" id="btn" class="btn btn-primary btn-lg btn-block"><span class=" glyphicon glyphicon-ok-circle "></span>Submit</button>
+</form>
 
-  </div>
 
+<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Closest Friend Match</h4>
+			<div class="divider"></div>
+			<h5 id="userName"></h5>
+			<img id="userPhoto" class="materialboxed" width="650" src="">
+		</div>
+		<div class="modal-footer">
+			<a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+		</div>
+	</div>
+</div>
 
-<!-- <script type="text/javascript">
-    // Question: What does this code do?
+<script type="text/javascript">
+
+  $("#btn").on('click', function() {
+  			$('#modal1').modal({
+  				// dismissible: false, // Modal can be dismissed by clicking outside of the modal
+  				// opacity: .5, // Opacity of modal background
+  				// // inDuration: 300, // Transition in duration
+  				// // outDuration: 200, // Transition out duration
+  				// startingTop: '4%', // Starting top style attribute
+  				// endingTop: '10%' // Ending top style attribute
+  			});
+  		});
+
     $("#btn").on("click", function(event) {
       event.preventDefault();
 
-      var newCharacter = {
-        name: $("#name").val().trim(),
-        role: $("#role").val().trim(),
-        age: $("#age").val().trim(),
-        forcePoints: $("#force-points").val().trim()
+      var FriendsList = {
+        name: $("#name").val(),
+        photo: $("#photo").val(),
+        scores: [
+            $("#answer1").val(),
+            $("#answer2").val(),
+            $("#answer3").val(),
+            $("#answer4").val(),
+            $("#answer5").val(),
+            $("#answer6").val(),
+            $("#answer7").val(),
+            $("#answer8").val(),
+            $("#answer9").val(),
+            $("#answer10").val()
+        ]
       };
+      console.log(FriendsList.name);
+      console.log(FriendsList.photo);
+      console.log(FriendsList.scores);
 
-      // Question: What does this code do??
-      $.post("/api/new", newCharacter)
-      .then(function(data) {
-        console.log(data);
-        alert("Adding character...");
-      });
+      $.post('api/friends', FriendsList)
+        		.done(function(data) {
+        			$('#name').html(data.matchName);
+  		    	  $("#photo").attr("src", data.matchImage);
 
-    });
-</script> -->
+        			$('#modal1').modal('toggle');
+        		});
+  		});
+</script>
 
 </body>
-
 </html>
